@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIVIANA</title>
+    <link rel="stylesheet" href="css/Styles.css" href="Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+
+    <header>
+        <img src="images/Logo.png" alt="Mi Logo" class="logo">
+
+        <nav>
+            <a href="#portfolio" class="nav-button">Portafolio</a>
+            <a href="#blog" class="nav-button">Blog</a>
+            <a href="#contact" class="nav-button">Contacto</a>
+        </nav>
+    </header>
+        
+        <audio controls autoplay>
+            <source src="audio/beans.mp3" type="audio/mpeg">
+        </audio>
+
+    <section class="hero">
+        <div class="slideshow">
+            <img src="images/Foto 1.png" alt="Foto 1" class="slide">
+            <img src="images/Foto 2.png" alt="Foto 2" class="slide">
+        </div>
+        <div class="hero-content">
+            <div class="text-content">
+                <p>Produtora de Multimedia, creativa e inovadora.</p>   
+                <p>Vasto conocimento en programas de Adobe, en fotografÌa, entre otros.</p>
+            </div>
+            <div class="small-images">
+                <img src="images/Ai.png" alt="Imagen pequeña 1">
+                <img src="images/Ps.png" alt="Imagen pequeña 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/Fotografía.jpg" alt="Fotografía">
+                <h3>Fotografía</h3>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/Personaje.PNG" alt="Diseño de Personajes">
+                <h3>Diseño de Personajes</h3>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/Paisaje.jpg" alt="Piezas Gráficas">
+                <h3>Piezas Gráficas</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="blog-grid">
+            <a href="articulo1.html" class="blog-item">
+                <h3>Artículo 1</h3>
+            </a>
+            <a href="articulo2.html" class="blog-item">
+                <h3>Artículo 2</h3>
+            </a>
+            <a href="articulo3.html" class="blog-item">
+                <h3>Artículo 3</h3>
+            </a>
+            <a href="articulo4.html" class="blog-item">
+                <h3>Artículo 4</h3>
+            </a>
+            <a href="articulo5.html" class="blog-item">
+                <h3>Artículo 5</h3>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <form>
+            <input type="text" placeholder="Nombre Completo" required>
+            <input type="text" placeholder="Teléfono" required>
+            <input type="text" placeholder="Correo Electrónico" required>
+            <input type="text" placeholder="Servicio requerido" required>
+            <textarea placeholder="Descripción del proyecto" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script>
+        // Slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide() {
+            slides.forEach(slide => slide.style.opacity = 0);
+            slides[currentSlide].style.opacity = 1;
+            currentSlide = (currentSlide + 1) % slides.length;
+        }
+
+        showSlide();
+        setInterval(showSlide, 5000);
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

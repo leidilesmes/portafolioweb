@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ángulos de Cámara</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Botón de regreso */
+        .back-button {
+            display: inline-block;
+            margin: 2rem;
+            padding: 1rem 2rem;
+            background: #333;
+            color: #fff;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background: #555;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contenedor del artículo */
+        .article-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Imagen del artículo */
+        .article-image {
+            width: 40%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .article-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contenido del artículo */
+        .article-content {
+            width: 60%;
+            padding: 2rem;
+        }
+
+        .article-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .article-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #e8491d;
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .article-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .article-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .article-image, .article-content {
+                width: 100%;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .back-button {
+                margin: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">Volver al Inicio</a>
+    
+    <div class="article-container">
+        <div class="article-image">
+            <img src="images/Articulo5.png" alt="Imagen del Artículo 5">
+        </div>
+        <div class="article-content">
+            <h1 class="article-title">Ángulos de Cámara</h1>
+            <p>Los ángulos de cámara son la posición desde la cual se captura una escena en fotografía o cine, y tienen un impacto en la percepción del espectador. Los principales ángulos incluyen:
+
+                Ángulo normal: La cámara está a la altura de los ojos, mostrando la escena de manera objetiva.
+                Ángulo elevado: La cámara está por encima del sujeto, haciendo que este se vea más pequeño o vulnerable.
+                Ángulo bajo: La cámara está por debajo del sujeto, dándole mayor poder o dominio.
+                Ángulo picado: La cámara se inclina hacia abajo, dando una sensación de superioridad o control.
+                Ángulo nadir: La cámara se coloca directamente sobre el sujeto, mostrando la escena desde abajo.
+                Cada ángulo influye en la narrativa visual y las emociones que se quieren transmitir.</p>
+        </div>
+    </div>
+</body>
+</html>
